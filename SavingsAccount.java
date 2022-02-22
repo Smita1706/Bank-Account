@@ -1,7 +1,7 @@
 package com.bridgelabz.bankAccount;
 
 public class SavingsAccount {
-	private static double annualInterestRate = 0f;
+	private static double annualInterestRate ;
 	private double savingsBalance;
 	
 	public SavingsAccount( double balance) {
@@ -24,6 +24,7 @@ public class SavingsAccount {
 	public double calculateMonthlyInterest() {
 		double monthlyInterest = savingsBalance *(annualInterestRate/100) / 12;
 		savingsBalance += monthlyInterest;
+		display(monthlyInterest);
 		return savingsBalance;
 	}
 	public void display(double interest) {
